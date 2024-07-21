@@ -99,12 +99,12 @@
 
         LeftParen {
             bindings = <&kp LS(N8)>;
-            key-positions = <10 9>;
+            key-positions = <9 8>;
         };
 
         RightParen {
             bindings = <&kp LS(N9)>;
-            key-positions = <10 11>;
+            key-positions = <10 9>;
         };
 
         FVEnter {
@@ -115,6 +115,11 @@
         JNLang {
             bindings = <&kp GRAVE>;
             key-positions = <36 48>;
+        };
+
+        KMBackspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <38 50>;
         };
     };
 };
