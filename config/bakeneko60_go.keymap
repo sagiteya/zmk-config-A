@@ -111,12 +111,12 @@
 
         LeftParen {
             bindings = <&kp LS(N8)>;
-            key-positions = <8 7>;
+            key-positions = <8 9>;
         };
 
         RightParen {
             bindings = <&kp LS(N9)>;
-            key-positions = <9 8>;
+            key-positions = <9 10>;
         };
 
         FVEnter {
