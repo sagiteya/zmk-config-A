@@ -35,11 +35,11 @@
             // ------------------------------------------------------------------------------------------
 
             bindings = <
-&gresc     &kp N1    &kp N2  &kp N3    &kp N4                      &kp N5  &kp N6       &kp N7                       &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL     &kp HOME  &kp END
-&kp TAB    &kp Q     &kp W   &kp E     &kp R                       &kp T   &kp Y        &kp U                        &kp I   &kp O      &kp P     &kp LBKT   &kp DELETE              &kp BACKSPACE
-&kp LCTRL  &kp A     &kp S   &kp D     &new_behavior LEFT_SHIFT F  &kp G   &kp H        &new_behavior RIGHT_SHIFT J  &kp K   &kp L      &kp SEMI  &kp SQT                            &kp RET
-&kp LSHFT            &kp Z   &kp X     &kp C                       &kp V   &kp B        &kp N                        &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp UP_ARROW            &mo 1
-&mo 3      &kp LGUI          &kp LALT                                      &lt 1 SPACE                                                  &kp RALT  &kp LEFT   &kp DOWN                &kp RIGHT
+&gresc     &kp N1    &kp N2  &kp N3    &kp N4                      &kp N5  &kp N6       &kp N7                       &kp N8  &kp N9     &kp N0                    &kp MINUS                  &kp EQUAL     &kp HOME  &kp END
+&kp TAB    &kp Q     &kp W   &kp E     &kp R                       &kp T   &kp Y        &kp U                        &kp I   &kp O      &kp P                     &kp LBKT                   &kp DELETE              &kp BACKSPACE
+&kp LCTRL  &kp A     &kp S   &kp D     &new_behavior LEFT_SHIFT F  &kp G   &kp H        &new_behavior RIGHT_SHIFT J  &kp K   &kp L      &new_behavior RCTRL SEMI  &new_behavior LA(SQT) SQT                          &kp RET
+&kp LSHFT            &kp Z   &kp X     &kp C                       &kp V   &kp B        &kp N                        &kp M   &kp COMMA  &kp DOT                   &kp FSLH                   &kp UP_ARROW            &mo 1
+&mo 3      &kp LGUI          &kp LALT                                      &lt 1 SPACE                                                  &kp RS(RCTRL)             &kp LEFT                   &kp DOWN                &kp RIGHT
             >;
         };
 
@@ -53,11 +53,11 @@
             // ------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp GRAVE  &kp F12   &kp F2    &kp F3     &kp F4           &kp F5           &kp F6           &kp F7           &kp F8                   &kp F9    &kp F10    &kp LS(INTERNATIONAL_3)  &kp INT_RO     &kp PAGE_UP  &kp PAGE_DOWN
-&trans     &trans    &kp UP    &trans     &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans                   &kp PGUP  &trans     &kp RIGHT_BRACE          &kp BACKSLASH               &trans
-&trans     &kp LEFT  &kp DOWN  &kp RIGHT  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &kp HOME                 &kp PGDN  &kp END    &trans                                               &bootloader
-&trans               &trans    &trans     &trans           &trans           &trans           &trans           &kp LS(INTERNATIONAL_3)  &trans    &trans     &trans                   &trans                      &trans
-&trans     &trans              &trans                                       &rgb_ug RGB_TOG                                                      &kp PSCRN  &trans                   &trans                      &mo 2
+&kp GRAVE  &kp F12   &kp F2     &kp F3     &kp F4          &kp F5     &kp F6           &kp F7    &kp F8        &kp F9             &kp F10        &kp LS(INTERNATIONAL_3)  &kp INT_RO  &kp PAGE_UP  &kp PAGE_DOWN
+&trans     &trans    &kp UP     &trans     &trans          &trans     &trans           &trans    &kp UP        &kp RIGHT_BRACKET  &kp BACKSLASH  &trans                   &trans                   &trans
+&trans     &kp LEFT  &kp DOWN   &kp RIGHT  &kp LEFT_SHIFT  &trans     &kp BACKSPACE    &kp LEFT  &kp DOWN      &kp RIGHT          &kp LCTRL      &trans                                            &bootloader
+&trans               &kp LC(Z)  &kp LS(X)  &kp LC(C)       &kp LC(V)  &kp LC(B)        &trans    &kp LS(INT1)  &trans             &trans         &trans                   &trans                   &trans
+&trans     &trans               &trans                                &rgb_ug RGB_TOG                                             &kp PSCRN      &trans                   &trans                   &mo 2
             >;
         };
 
@@ -81,11 +81,21 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans        &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N7        &kp N8  &kp N9        &kp MINUS  &kp MINUS  &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp SEMI   &kp APOS                   &trans
-&trans          &trans  &trans  &trans  &trans  &trans  &trans        &kp N1  &kp N2        &kp N3     &trans     &trans          &trans
-&trans  &trans          &trans                  &kp N0                                      &trans     &trans     &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans        &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N7        &kp N8  &kp N9        &kp MINUS     &kp MINUS     &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp LS(SEMI)  &kp LS(APOS)                  &trans
+&trans          &trans  &trans  &trans  &trans  &trans  &trans        &kp N1  &kp N2        &kp N3        &trans        &trans          &trans
+&trans  &trans          &trans                  &kp N0                                      &trans        &trans        &trans          &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&kp GRAVE  &kp F12   &kp F2     &kp F3     &kp F4           &kp F5           &kp F6           &kp F7           &kp F8                   &kp F9    &kp F10    &kp LS(INTERNATIONAL_3)  &kp INT_RO     &kp PAGE_UP  &kp PAGE_DOWN
+&trans     &trans    &kp UP     &trans     &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans                   &kp PGUP  &trans     &kp RIGHT_BRACE          &kp BACKSLASH               &trans
+&trans     &kp LEFT  &kp DOWN   &kp RIGHT  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &kp HOME                 &kp PGDN  &kp END    &trans                                               &bootloader
+&trans               &kp LC(Z)  &kp LS(X)  &kp LC(C)        &kp LC(V)        &kp LC(B)        &trans           &kp LS(INTERNATIONAL_3)  &trans    &trans     &trans                   &trans                      &trans
+&trans     &trans               &trans                                       &rgb_ug RGB_TOG                                                      &kp PSCRN  &trans                   &trans                      &mo 2
             >;
         };
     };
@@ -131,7 +141,7 @@
 
         KMBackspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <38 50>;
+            key-positions = <37 49>;
         };
     };
 };
